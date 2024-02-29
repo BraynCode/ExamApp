@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <title>Exam App</title>
+</head>
+
+<body>
+    <main id="hero" class="page-padding">
+        <div class="loader">
+            <div id="scale"><span></span></div>
+        </div>
+        <section class="welcome-section">
+            <div>
+                <span>Hello</span>
+                <aside>
+                    <span class="display-username">Mario Jeremiah</span>
+                    <i style="font-size: 25px;" class="fa fa-edit"></i>
+                </aside>
+            </div>
+            <div>
+                <i style="font-size: 25px;" class="fa fa-search search-btn"></i>
+                <input id="search-input" onchange="searchItem()" placeholder="Search" type="search">
+            </div>
+        </section>
+        <section class="choose-exam-section">
+            <h3>Explore categories</h3>
+            <section class="choose-exam-container">
+                <div id="chemistry" onclick="startTest('chemistry')" class="exam">
+                    <img src="images/chemistry.png" width="150" height="150" alt="">
+                    <p>Chemistry</p>
+                </div>
+                <div id="Biology" onclick="startTest('Biology')" class="exam">
+                    <img src="images/bacteria.png" width="150" height="150" alt="">
+                    <p>Biology</p>
+                </div>
+                <div id="Physics" onclick="startTest('Physics')" class="exam">
+                    <img src="images/transverse-wave.png" alt="">
+                    <p>Physics</p>
+                </div>
+                <div id="Mathematics" onclick="startTest('Mathematics')" class="exam">
+                    <img src="images/calculator.png" alt="">
+                    <p>Mathematics</p>
+                </div>
+                <div id="English" onclick="startTest('English')" class="exam">
+                    <img src="images/book.png" alt="">
+                    <p>English</p>
+                </div>
+                <div id="History" onclick="startTest('History')" class="exam">
+                    <img src="images/history.png" alt="">
+                    <p>History</p>
+                </div>
+                <div id="Literature" onclick="startTest('Literature')" class="exam">
+                    <img src="images/books.png" alt="">
+                    <p>Literature</p>
+                </div>
+            </section>
+        </section>
+        <footer>
+            <a class="home-btn" href="index.html">
+                <span>
+                    <i style="font-size: 20px;" class="fa fa-home"></i>
+                    <p>Home</p>
+                </span>
+            </a>
+            <a href="history.html">
+                <span>
+                    <i style="font-size: 20px;" class="fa fa-history"></i>
+                    <p>History</p>
+                </span>
+            </a>
+        </footer>
+    </main>
+    <section class="register-name fixed hide page-padding">
+        <img src="images/books.png" alt="">
+        <img src="images/book.png" alt="">
+        <img src="images/bacteria.png" alt="">
+        <img src="images/calculator.png" alt="">
+        <img src="images/chemistry.png" alt="">
+        <img src="images/history.png" alt="">
+        <img src="images/transverse-wave.png" alt="">
+        <img src="images/book.png" alt="">
+        <input type="text" class="username" autocomplete="false" placeholder="Enter your name">
+        <button class="save-name">Save</button>
+    </section>
+    <section class="set-time-ques hide">
+        <div>
+            <div class="set-time-container">
+                <span class="s-t">Set Number Of Questions</span>
+                <div class="time-container">
+                    <input id="question-input" style="width: 100px;" max="100" value="50" type="number">
+                </div>
+            </div>
+            <div style="margin-top: 40px;" class="set-time-container">
+                <span class="s-t">Set Time</span>
+                <div class="time-container">
+                    <span>
+                        <input id="hours" max="5" value="00" type="number">
+                        <p>Hour</p>
+                    </span>
+                    <span style="font-size: 30px;">:</span>
+                    <span>
+                        <input id="minutes" max="2" value="45" type="number">
+                        <p>Minutes</p>
+                    </span><span style="font-size: 30px;">:</span>
+                    <span><input id="seconds" max="2" value="00" type="number">
+                        <p>Second</p>
+                    </span>
+                </div>
+            </div>
+            <div class="submit-set-values">
+                <button class="hide-set-time-question">cancel</button>
+                <button class="start-test-now">start</button>
+            </div>
+        </div>
+    </section>
+    <script src="modal.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
